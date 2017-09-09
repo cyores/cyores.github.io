@@ -3,3 +3,8 @@
 	secondary: #616161
 	third:     #D21919
 */
+
+/* Background Colors */
+.cy-bg-primary   { background-color: #19D2D2; }
+.cy-bg-secondary { background-color: #616161; }
+.cy-bg-third     { background-color: #D21919; }
