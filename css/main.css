@@ -3,6 +3,8 @@
 	secondary: #616161
 	third:     #D21919
 */
+/* Overrides */
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link { background-color: #19D2D2 !important; }
 
 /* Background Colors */
 .cy-bg-primary   { background-color: #19D2D2; }
