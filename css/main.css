@@ -4,7 +4,8 @@
 	third:     #D21919
 */
 /* Overrides */
-.nav-pills .nav-link.active, .show>.nav-pills .nav-link { background-color: #19D2D2 !important; }
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link { background-color: #19D2D2 !important; color: #000 !important; }
+.text-muted { color: #AFB4BA !important; }
 
 /* Background Colors */
 .cy-bg-primary   { background-color: #19D2D2; }
@@ -14,3 +15,6 @@
 /* Utilities */
 a { color: #fff; }
 a:hover { color: #ddd; }
+
+/* Misc */
+.main { color: #fff; }
