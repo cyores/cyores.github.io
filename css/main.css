@@ -3,21 +3,63 @@
 	secondary: #616161
 	third:     #D21919
 */
+
 /* Overrides */
-.nav-pills .nav-link.active, .show>.nav-pills .nav-link { background-color: #19D2D2 !important; color: #000 !important; }
-.text-muted { color: #AFB4BA !important; }
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
 
 /* Background Colors */
 .cy-bg-primary   { background-color: #19D2D2; }
-.cy-bg-secondary { background-color: #616161; }
+.cy-bg-secondary { background-color: #eeeeee; }
 .cy-bg-third     { background-color: #D21919; }
 
 /* Utilities */
-a { color: #fff; }
-a:hover { color: #ddd; }
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.p-5 {
+	padding: 3rem;
+}
+.pt-5 {
+	padding-top: 3rem;
+}
+.pr-1 {
+	padding-right: 0.25rem;
+}
+.pl-1 {
+	padding-left: 0.25rem;
+}
+.pl-5 {
+	padding-left: 3rem;
+}
+.mb-2 {
+	margin-bottom: 0.5rem;
+}
+.mb-4 {
+	margin-bottom: 1.5rem;
+}
 
 /* Misc */
-.panel {
-	color: #fff;
-	min-height: 25rem;
+.cy-xp {
+	color: #333;
+	background-color: #fff;
+	padding: 2rem;
+	border-radius: 8px;
+	border: 1px solid rgba(0,0,0,0.1);
+	transition: all 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+}
+
+.cy-xp:hover {
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
