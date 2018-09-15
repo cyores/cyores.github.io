@@ -63,3 +63,12 @@ a {
 .cy-xp:hover {
 	box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
+
+.chip {
+	display: inline-flex;
+	background-color: #cecece;
+	border-radius: 2rem;
+	padding: 0 1rem;
+	margin: 0.5rem;
+	width: fit-content;
+}
