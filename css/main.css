@@ -179,3 +179,7 @@ a {
     background: linear-gradient(to bottom right, #325bef, #6832ef);
     color: #eee;
 }
+
+.checked {
+    color: var(--color-primary);
+}
