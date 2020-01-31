@@ -1,0 +1,46 @@
+{
+    "title": "Awards",
+    "awards": [
+        {
+            "award": "Best Overall Project",
+            "location": "Western University",
+            "date": "April 2019",
+            "description": "In my fourth year at Western, my team of three won the Engineering Capstone competition where the class is split into teams and tasked to build something of their choosing and present it at the end of the year. My team decided to build an adblocker powered by Machine Learning which provided several benefits (and a few drawbacks) over current adblocking methods. After eight months of programming and two nerve-racking presentations, my team won the prize for Best Overall Project.",
+            "points": [
+                "Won Best Overall Project in my final year Capstone course out of 22 teams",
+                "My team built a Chrome extension that uses machine learning and optical character recognition to 'see' a webpage like a human does to perceptually block ads on a website instead of using filter lists like traditional adblockers"
+            ],
+            "link": "https://github.com/AlexPowell9/Adclipse",
+            "technologies": [
+                "Javascript",
+                "Chrome Browser Extension",
+                "Machine Learning",
+                "ML5.js",
+                "Tesseract.js",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
+            "award": "First Prize, Third Year Capstone",
+            "location": "Western University",
+            "date": "April 2018",
+            "description": "In my third year at Western, the class was split into teams of six and everyone given the same project: build an online physiotherapy platform to the given specifications using any technology for a real, local physiotherapist. I had just completed my full stack development internship at Inkbox, so the team looked to me for leadership. Out of about 20 teams, my team won the contest (which came with a cash prize pf $5000) and was offered a contract extension to add some additional features. I had to decline due to my upcoming internship at Mercer.",
+            "points": [
+                "3rd year capstone-like project course: 18 teams tasked to build a cloud based physiotherapy platform for a real physiotherapist/client",
+                "Impressed with our results, the client contracted the team (on a paid basis) to develop additional features and functionality for a customer facing application",
+                "Won First Place with a cash prize of $5000"
+            ],
+            "link": null,
+            "technologies": [
+                "Javascript",
+                "Express.js",
+                "Node.js",
+                "Ember.js",
+                "MongoDB",
+                "HTML",
+                "CSS"
+            ]
+        }
+    ]
+}

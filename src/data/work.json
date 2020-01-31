@@ -1,0 +1,48 @@
+{
+    "title": "Work",
+    "jobs": [
+        {
+            "company": "Mercer Canada - Innovation Department",
+            "startDate": "May 2018",
+            "endDate": "August 2018",
+            "title": "Software Developer (Co-op)",
+            "description": "During my internship in the Innovation Department at Mercer (Summer 2018), I lead the design and implementation of a brand new web app that modernized the data collection process for one of the company’s consulting services. The old process relied on excel spreadsheets and although an effort to modernize had been made, virtually no progress was achieved. I was brought in to fix this system. After analyzing the requirements and looking at what had already been done, I decided the system needed to be completely rewritten to use an up-to-date framework and a more scalable, modular architecture. I redesigned the entire system from the database schema, to the backend API, to the frontend interface to meet the requirements. In addition to this web app, I also consulted with upper management on the technical side of some potential new products. About halfway through my internship, another, less experienced developer (straight from high school) was hired and I was given the unique opportunity to mentor another developer.",
+            "points": [
+                "Led a full stack development team in a global corporate innovation department",
+                "Designed and implemented a cloud based data collection tool to be used in the core HR consulting business",
+                "Consulted with business leaders as the technical resources in developing new and innovative business ideas, projects, and strategies"
+            ],
+            "technologies": [
+                "C#",
+                ".Net Core",
+                "Javascript",
+                "SQL Server",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
+            "company": "Inkbox",
+            "startDate": "June 2017",
+            "endDate": "August 2017",
+            "title": "Junior Developer (Co-op)",
+            "description": "During my internship at Inkbox (Summer 2017), I worked as a full stack developer on their custom tattoo designer which allows customers to custom design their own semi-permanent tattoo from their web browser. At Inkbox, I got to work under a much more experienced developer where I learned how to design software that was maintainable and scalable well into the future. The internship was scheduled for 2 months, but after realizing my value, Inkbox extended it into August and hired a developer to take my place at the end of my internship.",
+            "points": [
+                "Full stack web developer on an ecommerce site with a custom photoshop-like tool that allows users to custom design their own temporary tattoos in their browse",
+                "Built new features from the backend API to the frontend UI/UX",
+                "Accepted an extended work term following good performance"
+            ],
+            "technologies": [
+                "PHP",
+                "Laravel",
+                "Javascript",
+                "JQuery",
+                "Fabric.js",
+                "MySQL",
+                "HTML",
+                "CSS"
+            ]
+        }
+    ],
+    "freelance": []
+}
