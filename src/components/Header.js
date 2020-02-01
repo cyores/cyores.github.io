@@ -143,20 +143,18 @@ const Header = () => {
             >
                 {open ? <span>close</span> : <span>menu</span>}
             </MenuButton>
-
-            {open ? (
-                <SlideOpen>
-                    <PhoneLayout open={open}>
+            
+            <PhoneLayout>
+                {open ? (
+                    <SlideOpen>
                         <MenuOptions />
-                    </PhoneLayout>
-                </SlideOpen>
-            ) : (
-                <SlideClosed>
-                    <PhoneLayout open={open}>
+                    </SlideOpen>
+                ) : (
+                    <SlideClosed>
                         <MenuOptions />
-                    </PhoneLayout>
-                </SlideClosed>
-            )}
+                    </SlideClosed>
+                )}
+            </PhoneLayout>
 
             <DesktopLayout>
                 <MenuOptions />
