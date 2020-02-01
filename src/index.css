@@ -25,7 +25,7 @@
     --color-shadow: rgba(55, 58, 75, 0.08);
 
     /* Text Sizing */
-    --text-base-size: 1.05em;
+    --text-base-size: 1em;
     --text-scale-ratio: 1.2;
     --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
     --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));

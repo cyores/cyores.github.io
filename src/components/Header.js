@@ -10,12 +10,12 @@ const NavItem = styled.div`
     font-size: var(--text-md);
     line-height: 0.9;
     opacity: 0.8;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     transition: all 0.15s ease-in-out;
     &:hover {
         opacity: 1;
         transform: translate3d(0, -1px, 0);
-        border-bottom: 2px solid var(--color-primary);
+        border-bottom: 3px solid var(--color-primary);
     }
 `;
 
@@ -40,6 +40,7 @@ const Header = () => (
                 <NavItem>contact</NavItem>
             </div>
         </Flex>
+        <br></br>
     </>
 );
 
