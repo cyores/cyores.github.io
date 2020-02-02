@@ -118,8 +118,6 @@ const Spacer = styled.div`
 const MenuOptions = () => (
     <Flex>
         <div>
-            <NavItem>home</NavItem>
-            <Spacer>/</Spacer>
             <NavItem>education</NavItem>
             <Spacer>/</Spacer>
             <NavItem>experience</NavItem>
@@ -143,7 +141,7 @@ const Header = () => {
             >
                 {open ? <span>close</span> : <span>menu</span>}
             </MenuButton>
-            
+
             <PhoneLayout>
                 {open ? (
                     <SlideOpen>

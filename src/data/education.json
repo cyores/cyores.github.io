@@ -2,7 +2,7 @@
     "title": "Education",
     "schools": [
         {
-            "school": "Western University",
+            "name": "Western University",
             "graduationDate": "April 2019",
             "degree": "BESc, Software Engineering",
             "description": "Graduated from Western University in April 2019 with a Bachelor of Engineering Science in Software Engineering. Won third and fourth year Capstone design contests.",

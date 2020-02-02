@@ -1,7 +1,7 @@
 /**
  * BG:               #222831
- * FG:               #393E46
- * FG2:              #2E3238
+ * FG:               #2E3238
+ * FG2:              #393E46
  * Primary:          #325BEF
  * Complement:       #EfC632
  * Text:             #EEEEEE
@@ -10,8 +10,8 @@
 :root {
     /* Colors */
     --color-bg: #01040d;
-    --color-fg: #393e46;
-    --color-fg2: #2e3238;
+    --color-fg: #2e3238;
+    --color-fg2: #393e46;
     --color-text: #eeeeee;
 
     --color-primary: #325bef;
