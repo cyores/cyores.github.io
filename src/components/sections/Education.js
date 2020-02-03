@@ -8,21 +8,14 @@ const Education = () => {
     return (
         <>
             <Flex>
-                <div style={{ flex: "1 0 370px" }}>
-                    <div
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            maxHeight: "250px",
-                            background: "var(--color-fg)",
-                            clipPath: "polygon(0 0, 100% 0, 59% 100%, 0 100%)",
-                            padding: "var(--space-md)"
-                        }}
-                    >
-                        <h4 style={{ marginTop: "var(--space-sm)" }}>
-                            {JSONData.title}
-                        </h4>
-                    </div>
+                <div
+                    style={{
+                        flex: "1 0 370px",
+                        background: "var(--color-fg)",
+                        clipPath: "polygon(0 0, 100% 0, 59% 100%, 0 100%)"
+                    }}
+                >
+                    <h4 style={{paddingLeft: "var(--space-sm)"}}>{JSONData.title}</h4>
                 </div>
                 <div style={{ flex: "1 0 370px" }}>
                     {JSONData.schools.map(school => (

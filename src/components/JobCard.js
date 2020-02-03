@@ -8,7 +8,6 @@ import AnimateOpen from "./utils/AnimateOpen";
 import AnimateClose from "./utils/AnimateClose";
 
 const Wrapper = styled.div`
-    padding: var(--space-md);
     transition: all 0.15s ease;
 `;
 

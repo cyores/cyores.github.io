@@ -11,12 +11,12 @@ const Experience = () => {
         <>
             <Flex>
                 <div
-                    style={{ flex: "1 0 370px", padding: "0 var(--space-md)" }}
+                    style={{ flex: "1 0 375px" }}
                 >
                     <h4>{JSONData.title}</h4>
                     <div
                         style={{
-                            width: "100%",
+                            width: "95%",
                             height: "2px",
                             background: `url(${MadeonImg})`,
                             backgroundSize: "cover",
@@ -25,9 +25,8 @@ const Experience = () => {
                     ></div>
                 </div>
                 <div
-                    style={{ flex: "3 0 370px", padding: "0 var(--space-md)" }}
+                    style={{ flex: "3 0 " }}
                 >
-                    <br></br>
                     {JSONData.jobs.map(job => (
                         <JobCard data={job} />
                     ))}
