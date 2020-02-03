@@ -9,6 +9,7 @@ import { IoLogoLinkedin, IoLogoGithub, IoIosArrowDown } from "react-icons/io";
 import Header from "../components/Header";
 import Flex from "../components/utils/Flex";
 import Education from "../components/sections/Education";
+import Experience from "../components/sections/Experience";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -51,7 +52,7 @@ const Index = () => {
             >
                 <h1
                     style={{
-                        fontSize: "calc(2 * var(--text-xxxxl))",
+                        fontSize: "calc(1.75 * var(--text-xxxxl))",
                         lineHeight: 1
                     }}
                 >
@@ -126,7 +127,28 @@ const Index = () => {
 
             <div className="container-full">
                 <Education />
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Experience />
             </div>
+
+            <footer
+                style={{
+                    background: "var(--color-fg)",
+                    height: "25vh",
+                    marginTop: "var(--space-xxxxl)",
+                    textAlign: "center"
+                }}
+            >
+                <Flex>
+                    <div>
+                        <p>© {new Date().getFullYear()} Christian Yores</p>
+                        Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+                    </div>
+                </Flex>
+            </footer>
         </>
     );
 };

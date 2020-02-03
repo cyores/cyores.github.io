@@ -8,7 +8,7 @@ const Education = () => {
     return (
         <>
             <Flex>
-                <div style={{ flex: "10 500px" }}>
+                <div style={{ flex: "1 0 370px" }}>
                     <div
                         style={{
                             width: "100%",
@@ -24,7 +24,7 @@ const Education = () => {
                         </h4>
                     </div>
                 </div>
-                <div style={{ flex: "10 500px" }}>
+                <div style={{ flex: "1 0 370px" }}>
                     {JSONData.schools.map(school => (
                         <>
                             <h5>{school.name}</h5>
