@@ -2,14 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 
+// data
+import experienceData from "../data/experience.json";
+import educationData from "../data/education.json";
+import projectData from "../data/projects.json";
+
 // icons
 import { IoLogoLinkedin, IoLogoGithub, IoIosArrowDown } from "react-icons/io";
 
 // components
 import Header from "../components/Header";
 import Flex from "../components/utils/Flex";
-import Education from "../components/sections/Education";
-import Experience from "../components/sections/Experience";
+import Section from "../components/utils/Section.js";
+import JobCard from "../components/JobCard.js";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -126,12 +131,28 @@ const Index = () => {
             <br></br>
 
             <div className="container-full">
-                <Education />
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <Experience />
+                {/* EDUCATION */}
+                <Section title={educationData.title}>
+                    {educationData.schools.map(school => (
+                        <React.Fragment key={`school-${school.name}`}>
+                            <h5>{school.name}</h5>
+                            <h6>
+                                {school.degree}, &nbsp; {school.graduationDate}
+                            </h6>
+
+                            <p>{school.description}</p>
+                            <p>
+                                <small>{school.extra}</small>
+                            </p>
+                        </React.Fragment>
+                    ))}
+                </Section>
+                {/* EXPERIENCE */}
+                <Section title={experienceData.title}>
+                    {experienceData.jobs.map(job => (
+                        <JobCard key={`job-${job.company}`} data={job} />
+                    ))}
+                </Section>
             </div>
 
             <footer

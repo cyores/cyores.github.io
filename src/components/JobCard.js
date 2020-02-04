@@ -25,12 +25,16 @@ const JobCard = ({ data }) => {
             </p>
 
             <ul>
-                {data.points.map(point => (
-                    <li>{point}</li>
+                {data.points.map((point, i) => (
+                    <li key={`jobpoint-${data.title}-${data.company}-${i}`}>
+                        {point}
+                    </li>
                 ))}
             </ul>
-            {data.technologies.map(tech => (
-                <Chip>{tech}</Chip>
+            {data.technologies.map((tech, i) => (
+                <Chip key={`jobchip-${data.title}-${data.company}-${i}`}>
+                    {tech}
+                </Chip>
             ))}
 
             <br></br>
