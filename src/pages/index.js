@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
+import MadeonImg from "../images/madeon270.jpg";
 
 // data
 import experienceData from "../data/experience.json";
@@ -15,6 +16,7 @@ import Header from "../components/Header";
 import Flex from "../components/utils/Flex";
 import Section from "../components/utils/Section.js";
 import JobCard from "../components/JobCard.js";
+import Project from "../components/Project";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -53,7 +55,11 @@ const Index = () => {
 
             <div
                 className="container"
-                style={{ marginTop: "16vh", marginBottom: "16vh" }}
+                style={{
+                    marginTop: "16vh",
+                    marginBottom: "16vh",
+                    minHeight: "75vh"
+                }}
             >
                 <h1
                     style={{
@@ -130,8 +136,40 @@ const Index = () => {
 
             <br></br>
 
+            <div className="container">
+                <span id="projects"></span>
+                <Flex style={{ marginBottom: "var(--space-lg)" }}>
+                    <h4>Projects</h4>
+                    <div
+                        style={{
+                            width: "95%",
+                            height: "2px",
+                            background: `url(${MadeonImg})`,
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat"
+                        }}
+                    ></div>
+                </Flex>
+            </div>
+
             <div className="container-full">
-                {/* EDUCATION */}
+                <Flex>
+                    {projectData.projects.map(project => (
+                        <div style={{ width: "100%", marginBottom: "var(--space-lg)" }}>
+                            <Project
+                                title={project.title}
+                                description={project.description}
+                                technologies={project.technologies}
+                                liveLink={project.liveLink}
+                                githubLink={project.githubLink}
+                            />
+                        </div>
+                    ))}
+                </Flex>
+            </div>
+
+            <div className="container-full">
+                <span id="education"></span>
                 <Section title={educationData.title}>
                     {educationData.schools.map(school => (
                         <React.Fragment key={`school-${school.name}`}>
@@ -147,7 +185,8 @@ const Index = () => {
                         </React.Fragment>
                     ))}
                 </Section>
-                {/* EXPERIENCE */}
+
+                <span id="experience"></span>
                 <Section title={experienceData.title}>
                     {experienceData.jobs.map(job => (
                         <JobCard key={`job-${job.company}`} data={job} />

@@ -81,11 +81,17 @@ const Spacer = styled.div`
 const MenuOptions = () => (
     <Flex>
         <div>
-            <NavItem>education</NavItem>
+            <a href="#education">
+                <NavItem>education</NavItem>
+            </a>
             <Spacer>/</Spacer>
-            <NavItem>experience</NavItem>
+            <a href="#experience">
+                <NavItem>experience</NavItem>
+            </a>
             <Spacer>/</Spacer>
-            <NavItem>projects</NavItem>
+            <a href="#projects">
+                <NavItem>projects</NavItem>
+            </a>
             <Spacer>/</Spacer>
             <NavItem>contact</NavItem>
         </div>

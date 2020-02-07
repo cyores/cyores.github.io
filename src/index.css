@@ -55,6 +55,10 @@
 
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -123,14 +127,14 @@ hr {
 .container {
     position: relative;
     width: 66vw;
-    min-height: 75vh;
+    /* min-height: 75vh; */
     margin: 0 auto;
     box-sizing: border-box;
 }
 .container-full {
     position: relative;
     width: 96vw;
-    min-height: 75vh;
+    /* min-height: 75vh; */
     margin: 0 auto;
     box-sizing: border-box;
 }

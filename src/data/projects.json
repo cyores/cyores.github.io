@@ -3,7 +3,7 @@
     "projects": [
         {
             "title": "OpenSurvey",
-            "description": "A platform where people can create surveys/polls for others to answer. Completely anonymous, no account required for anyone (even survey creators). Built with React, Redux, Express.js, Node, and PostgreSQL.",
+            "description": "A platform where people can create surveys/polls for others to answer. Completely anonymous, no account required for anyone (even survey creators).",
             "githubLink": "https://github.com/cyores/opensurvey",
             "liveLink": null,
             "technologies": [
@@ -21,7 +21,7 @@
         },
         {
             "title": "Teach A Machine",
-            "description": "A tool that allows anyone to create a Machine Learning model that can classify anything they want. Built with React, Redux, and ML5.js.",
+            "description": "A tool that allows anyone to create a Machine Learning model that can classify anything they want.",
             "githubLink": "https://github.com/cyores/train-a-machine",
             "liveLink": "https://teachamachine.netlify.com/",
             "technologies": [
@@ -37,7 +37,7 @@
         },
         {
             "title": "Rent VS Buy",
-            "description": "A tool that helps break down the costs of the Rent vs Buy a home decision. Built with React.",
+            "description": "A tool that helps break down the costs of the Rent vs Buy a home decision.",
             "githubLink": "https://github.com/cyores/rentvbuy",
             "liveLink": "https://rentvbuy.netlify.com/",
             "technologies": ["Javascript", "React", "HTML", "CSS"],
