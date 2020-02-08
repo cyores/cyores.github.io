@@ -3,6 +3,14 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import MadeonImg from "../images/madeon270.jpg";
 
+// project images
+import OpenSurveyScreen from "../images/screenshots/opensurvey-screen.jpg";
+import RVBScreen from "../images/screenshots/rvb-screen.jpg";
+import TAMScreen from "../images/screenshots/tam-screen.jpg";
+import MLBScreen from "../images/screenshots/mlbstats-screen.jpg";
+import MPScreen from "../images/screenshots/mp-screen.jpg";
+import AdclipseScreen from "../images/screenshots/adclipse-screen.jpg";
+
 // data
 import experienceData from "../data/experience.json";
 import educationData from "../data/education.json";
@@ -35,6 +43,15 @@ const AnimateScrollDownArrow = styled.div`
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 `;
+
+const screenshots = [
+    { project: "OpenSurvey", image: OpenSurveyScreen },
+    { project: "Teach A Machine", image: TAMScreen },
+    { project: "Rent VS Buy", image: RVBScreen },
+    { project: "MLB Stats", image: MLBScreen },
+    { project: "Master Password", image: MPScreen },
+    { project: "Adclipse", image: AdclipseScreen }
+];
 
 const Index = () => {
     const data = useStaticQuery(
@@ -150,25 +167,49 @@ const Index = () => {
                         }}
                     ></div>
                 </Flex>
-            </div>
 
-            <div className="container-full">
                 <Flex>
-                    {projectData.projects.map(project => (
-                        <div style={{ width: "100%", marginBottom: "var(--space-lg)" }}>
+                    {projectData.projects.map((project, i) => (
+                        <div
+                            style={{
+                                width: "100%",
+                                marginBottom: "var(--space-xxl)"
+                            }}
+                        >
                             <Project
                                 title={project.title}
                                 description={project.description}
                                 technologies={project.technologies}
                                 liveLink={project.liveLink}
                                 githubLink={project.githubLink}
+                                img={screenshots.find(
+                                    screen => screen.project === project.title
+                                )}
+                                order={i % 2 === 0 ? 0 : 1}
                             />
                         </div>
                     ))}
                 </Flex>
+
+                <Flex>
+                    <div
+                        style={{
+                            width: "8vw",
+                            height: "4px",
+                            background: "var(--color-primary)"
+                        }}
+                    ></div>
+                </Flex>
             </div>
 
             <div className="container-full">
+                <span id="experience"></span>
+                <Section title={experienceData.title}>
+                    {experienceData.jobs.map(job => (
+                        <JobCard key={`job-${job.company}`} data={job} />
+                    ))}
+                </Section>
+
                 <span id="education"></span>
                 <Section title={educationData.title}>
                     {educationData.schools.map(school => (
@@ -183,13 +224,6 @@ const Index = () => {
                                 <small>{school.extra}</small>
                             </p>
                         </React.Fragment>
-                    ))}
-                </Section>
-
-                <span id="experience"></span>
-                <Section title={experienceData.title}>
-                    {experienceData.jobs.map(job => (
-                        <JobCard key={`job-${job.company}`} data={job} />
                     ))}
                 </Section>
             </div>

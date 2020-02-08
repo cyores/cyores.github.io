@@ -1,33 +1,39 @@
 import React from "react";
-import sampleImg from "../images/opensurvey-screen.jpg";
+import styled from "styled-components";
 
 // components
 import Chip from "./utils/Chip";
 import Button from "./utils/Button";
 import Flex from "./utils/Flex";
 
+const ImgWrapper = styled.div`
+    flex: 1 0 350px;
+    margin: var(--space-md) var(--space-xl);
+    order: ${props => props.order};
+    @media only screen and (max-width: 625px) {
+        order: 0;
+    }
+`;
+
 const Project = ({
     title,
     description,
     technologies,
     liveLink,
-    githubLink
+    githubLink,
+    order,
+    img
 }) => (
     <Flex>
-        <div
-            style={{
-                flex: "1 0 350px",
-                margin: "var(--space-md) var(--space-xl)"
-            }}
-        >
+        <ImgWrapper order={order}>
             <img
-                src={sampleImg}
+                src={img.image}
                 alt="project screenshot"
                 style={{ width: "100%", borderRadius: "4px" }}
             />
-        </div>
-        <div style={{ flex: "4 0" }}>
-            <h5 style={{ marginTop: "var(--space-sm)" }}>
+        </ImgWrapper>
+        <div style={{ flex: "3 0", textAlign: "center" }}>
+            <h5 style={{ marginTop: "var(--space-md)" }}>
                 <b>{title}</b>
             </h5>
             <p>{description}</p>

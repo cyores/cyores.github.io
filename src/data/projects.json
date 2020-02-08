@@ -16,8 +16,7 @@
                 "PostgreSQL",
                 "HTML",
                 "CSS"
-            ],
-            "screenshots": []
+            ]
         },
         {
             "title": "Teach A Machine",
@@ -32,32 +31,28 @@
                 "Machine Learning",
                 "HTML",
                 "CSS"
-            ],
-            "screenshots": []
+            ]
         },
         {
             "title": "Rent VS Buy",
             "description": "A tool that helps break down the costs of the Rent vs Buy a home decision.",
             "githubLink": "https://github.com/cyores/rentvbuy",
             "liveLink": "https://rentvbuy.netlify.com/",
-            "technologies": ["Javascript", "React", "HTML", "CSS"],
-            "screenshots": []
+            "technologies": ["Javascript", "React", "HTML", "CSS"]
         },
         {
             "title": "MLB Stats",
             "description": "A website where you can view all MLB teams, players, and their stats. Build with React and the freely availble MLB API.",
             "githubLink": "https://github.com/cyores/rentvbuy",
             "liveLink": "https://mlbstats.netlify.com/",
-            "technologies": ["Javascript", "React", "HTML", "CSS"],
-            "screenshots": []
+            "technologies": ["Javascript", "React", "HTML", "CSS"]
         },
         {
             "title": "Master Password",
             "description": "A cross browser extension based on the Master Password algorithm by Maarten Billemont. This is a stateless password manager and therefore requires no storage, database, or internet connection.",
             "githubLink": "https://github.com/cyores/mpw-xbrowserextension",
             "liveLink": null,
-            "technologies": ["Javascript", "Chrome Extension", "HTML", "CSS"],
-            "screenshots": []
+            "technologies": ["Javascript", "Chrome Extension", "HTML", "CSS"]
         },
         {
             "title": "Adclipse",
@@ -72,8 +67,7 @@
                 "Tesseract.js",
                 "HTML",
                 "CSS"
-            ],
-            "screenshots": []
+            ]
         }
     ]
 }
