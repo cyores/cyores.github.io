@@ -47,7 +47,7 @@ const Project = ({
                 </a>
             )}
             {githubLink && (
-                <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{margin: "0 var(--space-sm)"}}>
                     <Button>View on GitHub</Button>
                 </a>
             )}
