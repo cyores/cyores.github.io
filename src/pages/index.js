@@ -25,6 +25,7 @@ import Flex from "../components/utils/Flex";
 import Section from "../components/utils/Section.js";
 import JobCard from "../components/JobCard.js";
 import Project from "../components/Project";
+import SEO from "../components/utils/SEO";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -68,6 +69,7 @@ const Index = () => {
 
     return (
         <>
+            <SEO title="Home" />
             <Header />
 
             <div
