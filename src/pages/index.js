@@ -72,85 +72,84 @@ const Index = () => {
             <SEO title="Home" />
             <Header />
 
-            <div
-                className="container"
-                style={{
-                    marginTop: "16vh",
-                    marginBottom: "16vh",
-                    minHeight: "75vh"
-                }}
-            >
-                <h1
+            <div className="svg-bg">
+                <div
+                    className="container"
+                    style={{ paddingTop: "var(--space-xxxl)" }}
+                >
+                    <h1
+                        style={{
+                            marginTop: 0,
+                            fontSize: "calc(1.75 * var(--text-xxxxl))",
+                            lineHeight: 1
+                        }}
+                    >
+                        {data.site.siteMetadata.title}
+                    </h1>
+
+                    <h3 style={{ marginTop: "-33px", marginBottom: 0 }}>
+                        Full Stack Developer
+                    </h3>
+
+                    <br></br>
+
+                    <Flex dir="rowleft">
+                        <div
+                            style={{
+                                width: "8vw",
+                                height: "4px",
+                                background: "var(--color-primary)"
+                            }}
+                        ></div>
+                    </Flex>
+
+                    <br></br>
+
+                    <Flex dir="rowleft">
+                        <a
+                            href="https://linkedin.com/in/christianyores"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <IoLogoLinkedin
+                                style={{
+                                    color: "var(--color-text)",
+                                    fontSize: "var(--text-xxxxl)",
+                                    marginRight: "var(--space-xxxxs)"
+                                }}
+                            />
+                        </a>
+                        <a
+                            href="https://github.com/cyores"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <IoLogoGithub
+                                style={{
+                                    color: "var(--color-text)",
+                                    fontSize: "var(--text-xxxxl)",
+                                    marginLeft: "var(--space-xxxxs)"
+                                }}
+                            />
+                        </a>
+                    </Flex>
+                </div>
+
+                <div
                     style={{
-                        fontSize: "calc(1.75 * var(--text-xxxxl))",
-                        lineHeight: 1
+                        position: "absolute",
+                        bottom: "var(--space-xxxl)",
+                        width: "100%"
                     }}
                 >
-                    {data.site.siteMetadata.title}
-                </h1>
-
-                <h3 style={{ marginTop: "-33px", marginBottom: 0 }}>
-                    Full Stack Developer
-                </h3>
-
-                <br></br>
-
-                <Flex dir="rowleft">
-                    <div
-                        style={{
-                            width: "8vw",
-                            height: "4px",
-                            background: "var(--color-primary)"
-                        }}
-                    ></div>
-                </Flex>
-
-                <br></br>
-
-                <Flex dir="rowleft">
-                    <a
-                        href="https://linkedin.com/in/christianyores"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <IoLogoLinkedin
-                            style={{
-                                color: "var(--color-text)",
-                                fontSize: "var(--text-xxxxl)",
-                                marginRight: "var(--space-xxxxs)"
-                            }}
-                        />
-                    </a>
-                    <a
-                        href="https://github.com/cyores"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <IoLogoGithub
-                            style={{
-                                color: "var(--color-text)",
-                                fontSize: "var(--text-xxxxl)",
-                                marginLeft: "var(--space-xxxxs)"
-                            }}
-                        />
-                    </a>
-                </Flex>
-            </div>
-
-            <div
-                style={{
-                    position: "absolute",
-                    bottom: "33px",
-                    width: "100%"
-                }}
-            >
-                <Flex>
-                    <AnimateScrollDownArrow>
-                        <IoIosArrowDown
-                            style={{ fontSize: "var(--text-xxl)" }}
-                        />
-                    </AnimateScrollDownArrow>
-                </Flex>
+                    <Flex>
+                        <AnimateScrollDownArrow>
+                            <IoIosArrowDown
+                                style={{ fontSize: "var(--text-xxl)" }}
+                            />
+                        </AnimateScrollDownArrow>
+                    </Flex>
+                </div>
             </div>
 
             <br></br>
@@ -173,6 +172,7 @@ const Index = () => {
                 <Flex>
                     {projectData.projects.map((project, i) => (
                         <div
+                            key={`projectwrapper-${i}`}
                             style={{
                                 width: "100%",
                                 marginBottom: "var(--space-xxl)"
@@ -233,15 +233,25 @@ const Index = () => {
             <footer
                 style={{
                     background: "var(--color-fg)",
-                    height: "25vh",
-                    marginTop: "var(--space-xxxxl)",
-                    textAlign: "center"
+                    minHeight: "10vh",
+                    marginTop: "calc(2 * var(--space-xxxxl))",
+                    textAlign: "center",
+                    padding: "var(--space-md) 0"
                 }}
             >
                 <Flex>
                     <div>
                         <p>© {new Date().getFullYear()} Christian Yores</p>
                         Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+                        <br></br>
+                        Background by{" "}
+                        <a
+                            href="https://svgbackgrounds.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            SVGBackgrounds.com.
+                        </a>
                     </div>
                 </Flex>
             </footer>

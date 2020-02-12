@@ -11,7 +11,6 @@ const Wrapper = styled.div`
     background: url(${MadeonImg});
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: var(--space-lg);
 `;
 
 const DesktopLayout = styled.div`
