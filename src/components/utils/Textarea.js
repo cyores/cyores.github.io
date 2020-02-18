@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.textarea`
-    width: 100%;
-    padding: var(--space-sm);
+    padding: var(--space-xs);
     margin-bottom: var(--space-md);
     outline: none;
     border-radius: 4px;
@@ -24,7 +23,6 @@ const Input = ({ type, label, placeholder }) => {
     return (
         <>
             <label htmlFor={label}>{label}</label>
-            <br></br>
             <Wrapper
                 id={label}
                 type={type}

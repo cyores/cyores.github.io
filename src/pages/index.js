@@ -237,7 +237,7 @@ const Index = () => {
                     <h4>Contact</h4>
                     <div
                         style={{
-                            width: "95%",
+                            width: "100%",
                             height: "2px",
                             background: `url(${MadeonImg})`,
                             backgroundSize: "cover",
@@ -245,37 +245,40 @@ const Index = () => {
                         }}
                     ></div>
                 </Flex>
-                <Flex dir="col">
-                    <h5>Send me a message</h5>
-                    <form
-                        method="post"
-                        netlify-honeypot="bot-field"
-                        data-netlify="true"
-                        name="Contact Form"
-                    >
-                        <input type="hidden" name="bot-field" />
-                        <Input
-                            type="text"
-                            label="Name"
-                            placeholder="Name"
-                            onChange={() => console.log("Input changed")}
-                        />
-                        <Input
-                            type="text"
-                            label="Email"
-                            placeholder="Email"
-                            onChange={() => console.log("Input changed")}
-                        />
-                        <Textarea
-                            label="Message"
-                            placeholder="Type your message here"
-                            onChange={() => console.log("Input changed")}
-                        ></Textarea>
-                        <Flex dir="rowleft">
-                            <Button type="submit">Send</Button>
-                        </Flex>
-                    </form>
-                </Flex>
+                <h5>Send me a message</h5>
+                <form
+                    method="post"
+                    netlify-honeypot="bot-field"
+                    data-netlify="true"
+                    name="Contact Form"
+                    style={{
+                        display: "flex",
+                        flexFlow: "column wrap",
+                        justifyContent: "space-around"
+                    }}
+                >
+                    <input type="hidden" name="bot-field" />
+                    <Input
+                        type="text"
+                        label="Name"
+                        placeholder="Name"
+                        onChange={() => console.log("Input changed")}
+                    />
+                    <Input
+                        type="text"
+                        label="Email"
+                        placeholder="Email"
+                        onChange={() => console.log("Input changed")}
+                    />
+                    <Textarea
+                        label="Message"
+                        placeholder="Type your message here"
+                        onChange={() => console.log("Input changed")}
+                    ></Textarea>
+                    <Flex dir="rowleft">
+                        <Button type="submit">Send</Button>
+                    </Flex>
+                </form>
             </div>
 
             <footer

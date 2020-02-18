@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-const Wrapper = styled.input`
-    width: 100%;
-    padding: var(--space-sm);
+const StyledInput = styled.input`
+    // width: 100%;
+    padding: var(--space-xs);
     margin-bottom: var(--space-md);
     outline: none;
     border-radius: 4px;
@@ -24,13 +24,12 @@ const Input = ({ type, label, placeholder }) => {
     return (
         <>
             <label htmlFor={label}>{label}</label>
-            <br></br>
-            <Wrapper
+            <StyledInput
                 id={label}
                 type={type}
                 placeholder={placeholder}
                 name={label}
-            ></Wrapper>
+            />
         </>
     );
 };
