@@ -152,7 +152,7 @@ hr {
     min-height: 100vh;
     margin-bottom: var(--space-xxxl);
     animation-name: svgAnimate;
-    animation-duration: 8s;
+    animation-duration: 16s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }

@@ -26,6 +26,7 @@ import Section from "../components/utils/Section.js";
 import JobCard from "../components/JobCard.js";
 import Project from "../components/Project";
 import SEO from "../components/utils/SEO";
+import Button from "../components/utils/Button";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -79,17 +80,15 @@ const Index = () => {
                 >
                     <h1
                         style={{
-                            marginTop: 0,
-                            fontSize: "calc(1.75 * var(--text-xxxxl))",
+                            margin: 0,
+                            fontSize: "calc(var(--text-xxxxl) * 1.7)",
                             lineHeight: 1
                         }}
                     >
                         {data.site.siteMetadata.title}
                     </h1>
 
-                    <h3 style={{ marginTop: "-33px", marginBottom: 0 }}>
-                        Full Stack Developer
-                    </h3>
+                    <h3 style={{ margin: 0 }}>Full Stack Developer</h3>
 
                     <br></br>
 
@@ -228,6 +227,29 @@ const Index = () => {
                         </React.Fragment>
                     ))}
                 </Section>
+            </div>
+
+            <div className="container">
+                <span id="contact"></span>
+                <Flex style={{ marginBottom: "var(--space-lg)" }}>
+                    <h4>Contact</h4>
+                    <div
+                        style={{
+                            width: "95%",
+                            height: "2px",
+                            background: `url(${MadeonImg})`,
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat"
+                        }}
+                    ></div>
+                </Flex>
+                <Flex dir="col">
+                    <h5>Send me a message</h5>
+                    <input type="text" placeholder="Name" />
+                    <input type="text" placeholder="email" />
+                    <input type="text" placeholder="Message" />
+                    <Button>Send</Button>
+                </Flex>
             </div>
 
             <footer
