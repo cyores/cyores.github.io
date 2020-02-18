@@ -23,8 +23,10 @@ const Wrapper = styled.button`
     }
 `;
 
-const Button = ({ children, onClick }) => (
-    <Wrapper onClick={onClick}>{children}</Wrapper>
+const Button = ({ children, type = "button", onClick }) => (
+    <Wrapper onClick={onClick} type={type}>
+        {children}
+    </Wrapper>
 );
 
 export default Button;

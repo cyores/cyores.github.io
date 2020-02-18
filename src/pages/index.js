@@ -27,6 +27,8 @@ import JobCard from "../components/JobCard.js";
 import Project from "../components/Project";
 import SEO from "../components/utils/SEO";
 import Button from "../components/utils/Button";
+import Input from "../components/utils/Input";
+import Textarea from "../components/utils/Textarea";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -245,10 +247,34 @@ const Index = () => {
                 </Flex>
                 <Flex dir="col">
                     <h5>Send me a message</h5>
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="email" />
-                    <input type="text" placeholder="Message" />
-                    <Button>Send</Button>
+                    <form
+                        method="post"
+                        netlify-honeypot="bot-field"
+                        data-netlify="true"
+                        name="Contact Form"
+                    >
+                        <input type="hidden" name="bot-field" />
+                        <Input
+                            type="text"
+                            label="Name"
+                            placeholder="Name"
+                            onChange={() => console.log("Input changed")}
+                        />
+                        <Input
+                            type="text"
+                            label="Email"
+                            placeholder="Email"
+                            onChange={() => console.log("Input changed")}
+                        />
+                        <Textarea
+                            label="Message"
+                            placeholder="Type your message here"
+                            onChange={() => console.log("Input changed")}
+                        ></Textarea>
+                        <Flex dir="rowleft">
+                            <Button type="submit">Send</Button>
+                        </Flex>
+                    </form>
                 </Flex>
             </div>
 
