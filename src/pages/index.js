@@ -118,6 +118,7 @@ const Index = () => {
                                     fontSize: "var(--text-xxxxl)",
                                     marginRight: "var(--space-xxxxs)"
                                 }}
+                                alt="LinkedIn"
                             />
                         </a>
                         <a
@@ -131,6 +132,7 @@ const Index = () => {
                                     fontSize: "var(--text-xxxxl)",
                                     marginLeft: "var(--space-xxxxs)"
                                 }}
+                                alt="GitHub"
                             />
                         </a>
                     </Flex>

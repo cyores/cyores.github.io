@@ -161,8 +161,10 @@ hr {
     content: "";
     height: 100%;
     width: 100%;
+    pointer-events: none;
     top: 0;
     left: 0;
+    z-index: 1;
     background: linear-gradient(
         180deg,
         rgba(1, 4, 13, 0) 0%,
