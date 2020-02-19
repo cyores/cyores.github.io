@@ -8,7 +8,7 @@ import Flex from "./utils/Flex";
 
 const ImgWrapper = styled.div`
     flex: 1 0 350px;
-    margin: var(--space-md) var(--space-xl);
+    margin: var(--space-md) var(--space-sm);
     order: ${props => props.order};
     @media only screen and (max-width: 625px) {
         order: 0;
@@ -32,7 +32,13 @@ const Project = ({
                 style={{ width: "100%", borderRadius: "4px" }}
             />
         </ImgWrapper>
-        <div style={{ flex: "3 0", textAlign: "center" }}>
+        <div
+            style={{
+                flex: "3 0",
+                textAlign: "center",
+                margin: "0 var(--space-sm)"
+            }}
+        >
             <h5 style={{ marginTop: "var(--space-md)" }}>
                 <b>{title}</b>
             </h5>
@@ -47,7 +53,12 @@ const Project = ({
                 </a>
             )}
             {githubLink && (
-                <a href={githubLink} target="_blank" rel="noopener noreferrer" style={{margin: "0 var(--space-sm)"}}>
+                <a
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ margin: "0 var(--space-sm)" }}
+                >
                     <Button>View on GitHub</Button>
                 </a>
             )}
