@@ -1,5 +1,5 @@
 import React from "react";
-import MadeonImg from "../../images/madeon270.jpg";
+import MadeonImg from "../../images/madeonBG.jpg";
 
 // components
 import Flex from "./Flex";

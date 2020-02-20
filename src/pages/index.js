@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import MadeonImg from "../images/madeon270.jpg";
+import MadeonImg from "../images/madeonBG.jpg";
 
 // project images
 import OpenSurveyScreen from "../images/screenshots/opensurvey-screen.jpg";

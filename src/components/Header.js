@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import MadeonImg from "../images/madeon270.jpg";
+import MadeonImg from "../images/madeonBG.jpg";
 
 // components
 import Flex from "./utils/Flex";
