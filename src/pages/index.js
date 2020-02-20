@@ -1,20 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import MadeonImg from "../images/madeonBG.jpg";
-
-// project images
-import OpenSurveyScreen from "../images/screenshots/opensurvey-screen.jpg";
-import RVBScreen from "../images/screenshots/rvb-screen.jpg";
-import TAMScreen from "../images/screenshots/tam-screen.jpg";
-import MLBScreen from "../images/screenshots/mlbstats-screen.jpg";
-import MPScreen from "../images/screenshots/mp-screen.jpg";
-import AdclipseScreen from "../images/screenshots/adclipse-screen.jpg";
 
 // data
 import experienceData from "../data/experience.json";
 import educationData from "../data/education.json";
-import projectData from "../data/projects.json";
 
 // icons
 import { IoLogoLinkedin, IoLogoGithub, IoIosArrowDown } from "react-icons/io";
@@ -48,28 +39,12 @@ const AnimateScrollDownArrow = styled.div`
     animation-timing-function: ease;
 `;
 
-const screenshots = [
-    { project: "OpenSurvey", image: OpenSurveyScreen },
-    { project: "Teach A Machine", image: TAMScreen },
-    { project: "Rent VS Buy", image: RVBScreen },
-    { project: "MLB Stats", image: MLBScreen },
-    { project: "Master Password", image: MPScreen },
-    { project: "Adclipse", image: AdclipseScreen }
-];
-
-const Index = () => {
-    const data = useStaticQuery(
-        graphql`
-            query Index_SiteTitleQuery {
-                site {
-                    siteMetadata {
-                        title
-                    }
-                }
-            }
-        `
-    );
-
+const Index = ({
+    data: {
+        allMarkdownRemark: { edges }
+    }
+}) => {
+    const projects = edges;
     return (
         <>
             <SEO title="Home" />
@@ -87,7 +62,7 @@ const Index = () => {
                             lineHeight: 1
                         }}
                     >
-                        {data.site.siteMetadata.title}
+                        Christian Yores
                     </h1>
 
                     <h3 style={{ margin: 0 }}>Full Stack Developer</h3>
@@ -111,6 +86,7 @@ const Index = () => {
                             href="https://linkedin.com/in/christianyores"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="LinkedIn Link"
                         >
                             <IoLogoLinkedin
                                 style={{
@@ -118,13 +94,14 @@ const Index = () => {
                                     fontSize: "var(--text-xxxxl)",
                                     marginRight: "var(--space-xxxxs)"
                                 }}
-                                alt="LinkedIn"
+                                title="LinkedIn"
                             />
                         </a>
                         <a
                             href="https://github.com/cyores"
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Github Link"
                         >
                             <IoLogoGithub
                                 style={{
@@ -132,7 +109,7 @@ const Index = () => {
                                     fontSize: "var(--text-xxxxl)",
                                     marginLeft: "var(--space-xxxxs)"
                                 }}
-                                alt="GitHub"
+                                title="Github"
                             />
                         </a>
                     </Flex>
@@ -173,27 +150,33 @@ const Index = () => {
                 </Flex>
 
                 <Flex>
-                    {projectData.projects.map((project, i) => (
-                        <div
-                            key={`projectwrapper-${i}`}
-                            style={{
-                                width: "100%",
-                                marginBottom: "var(--space-xxl)"
-                            }}
-                        >
-                            <Project
-                                title={project.title}
-                                description={project.description}
-                                technologies={project.technologies}
-                                liveLink={project.liveLink}
-                                githubLink={project.githubLink}
-                                img={screenshots.find(
-                                    screen => screen.project === project.title
-                                )}
-                                order={i % 2 === 0 ? 0 : 1}
-                            />
-                        </div>
-                    ))}
+                    {projects.map((edge, i) => {
+                        const project = edge.node.frontmatter;
+                        const desc = edge.node.html;
+                        return (
+                            <div
+                                key={`projectwrapper-${i}`}
+                                style={{
+                                    width: "100%",
+                                    marginBottom: "var(--space-xxl)"
+                                }}
+                            >
+                                <Project
+                                    title={project.title}
+                                    description={desc}
+                                    technologies={project.technologies.split(
+                                        ","
+                                    )}
+                                    liveLink={project.liveLink}
+                                    githubLink={project.githubLink}
+                                    img={
+                                        project.screenshot.childImageSharp.fluid
+                                    }
+                                    order={i % 2 === 0 ? 0 : 1}
+                                />
+                            </div>
+                        );
+                    })}
                 </Flex>
 
                 <Flex>
@@ -313,3 +296,29 @@ const Index = () => {
 };
 
 export default Index;
+
+export const projectsQuery = graphql`
+    query {
+        allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
+            edges {
+                node {
+                    id
+                    html
+                    frontmatter {
+                        title
+                        liveLink
+                        githubLink
+                        technologies
+                        screenshot {
+                            childImageSharp {
+                                fluid(maxWidth: 600) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;

@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Chip from "./utils/Chip";
 import Button from "./utils/Button";
 import Flex from "./utils/Flex";
+import Img from "gatsby-image";
 
 const ImgWrapper = styled.div`
     flex: 1 0 350px;
@@ -26,8 +27,8 @@ const Project = ({
 }) => (
     <Flex>
         <ImgWrapper order={order}>
-            <img
-                src={img.image}
+            <Img
+                fluid={img}
                 alt="project screenshot"
                 style={{ width: "100%", borderRadius: "4px" }}
             />
@@ -42,7 +43,7 @@ const Project = ({
             <h5 style={{ marginTop: "var(--space-md)" }}>
                 <b>{title}</b>
             </h5>
-            <p>{description}</p>
+            <div dangerouslySetInnerHTML={{ __html: description }}></div>
             {technologies.map((tech, i) => (
                 <Chip key={`projectchips-${title}-${tech}-${i}`}>{tech}</Chip>
             ))}
