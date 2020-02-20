@@ -20,6 +20,8 @@ import SEO from "../components/utils/SEO";
 import Button from "../components/utils/Button";
 import Input from "../components/utils/Input";
 import Textarea from "../components/utils/Textarea";
+import NetlifyForm from "../components/utils/NetlifyForm";
+import Footer from "../components/Footer";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -53,65 +55,68 @@ const Index = ({
             <div className="svg-bg">
                 <div
                     className="container"
-                    style={{ paddingTop: "var(--space-xxxl)" }}
+                    style={{ paddingTop: "var(--space-xxl)" }}
                 >
-                    <h1
-                        style={{
-                            margin: 0,
-                            fontSize: "calc(var(--text-xxxxl) * 1.7)",
-                            lineHeight: 1
-                        }}
-                    >
-                        Christian Yores
-                    </h1>
-
-                    <h3 style={{ margin: 0 }}>Full Stack Developer</h3>
-
-                    <br></br>
-
-                    <Flex dir="rowleft">
+                    <Flex>
                         <div
                             style={{
-                                width: "8vw",
-                                height: "4px",
-                                background: "var(--color-primary)"
+                                flex: "1 0 350px",
+                                maxWidth: "600px",
+                                textAlign: "center"
                             }}
-                        ></div>
-                    </Flex>
-
-                    <br></br>
-
-                    <Flex dir="rowleft">
-                        <a
-                            href="https://linkedin.com/in/christianyores"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn Link"
                         >
-                            <IoLogoLinkedin
-                                style={{
-                                    color: "var(--color-text)",
-                                    fontSize: "var(--text-xxxxl)",
-                                    marginRight: "var(--space-xxxxs)"
-                                }}
-                                title="LinkedIn"
-                            />
-                        </a>
-                        <a
-                            href="https://github.com/cyores"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Github Link"
-                        >
-                            <IoLogoGithub
-                                style={{
-                                    color: "var(--color-text)",
-                                    fontSize: "var(--text-xxxxl)",
-                                    marginLeft: "var(--space-xxxxs)"
-                                }}
-                                title="Github"
-                            />
-                        </a>
+                            <h1>Christian Yores</h1>
+                            <Flex>
+                                <div
+                                    style={{
+                                        width: "8vw",
+                                        minWidth: "175px",
+                                        height: "4px",
+                                        background: "var(--color-primary)"
+                                    }}
+                                ></div>
+                            </Flex>
+                            <h5>
+                                <i>
+                                    Hi, I'm Christian. I'm a software engineer
+                                    based in Toronto, Canada specializing in
+                                    cloud based web applications.
+                                </i>
+                            </h5>
+
+                            <br></br>
+
+                            <a
+                                href="https://linkedin.com/in/christianyores"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn Link"
+                            >
+                                <IoLogoLinkedin
+                                    style={{
+                                        color: "var(--color-text)",
+                                        fontSize: "var(--text-xxxxl)",
+                                        marginRight: "var(--space-xxxxs)"
+                                    }}
+                                    title="LinkedIn"
+                                />
+                            </a>
+                            <a
+                                href="https://github.com/cyores"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Github Link"
+                            >
+                                <IoLogoGithub
+                                    style={{
+                                        color: "var(--color-text)",
+                                        fontSize: "var(--text-xxxxl)",
+                                        marginLeft: "var(--space-xxxxs)"
+                                    }}
+                                    title="Github"
+                                />
+                            </a>
+                        </div>
                     </Flex>
                 </div>
 
@@ -216,6 +221,8 @@ const Index = ({
                 </Section>
             </div>
 
+            <br></br>
+
             <div className="container">
                 <span id="contact"></span>
                 <Flex style={{ marginBottom: "var(--space-lg)" }}>
@@ -231,10 +238,7 @@ const Index = ({
                     ></div>
                 </Flex>
                 <h5>Send me a message</h5>
-                <form
-                    method="post"
-                    netlify-honeypot="bot-field"
-                    data-netlify="true"
+                <NetlifyForm
                     name="Contact Form"
                     style={{
                         display: "flex",
@@ -263,34 +267,10 @@ const Index = ({
                     <Flex dir="rowleft">
                         <Button type="submit">Send</Button>
                     </Flex>
-                </form>
+                </NetlifyForm>
             </div>
 
-            <footer
-                style={{
-                    background: "var(--color-fg)",
-                    minHeight: "10vh",
-                    marginTop: "calc(2 * var(--space-xxxxl))",
-                    textAlign: "center",
-                    padding: "var(--space-md) 0"
-                }}
-            >
-                <Flex>
-                    <div>
-                        <p>© {new Date().getFullYear()} Christian Yores</p>
-                        Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
-                        <br></br>
-                        Background by{" "}
-                        <a
-                            href="https://svgbackgrounds.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            SVGBackgrounds.com.
-                        </a>
-                    </div>
-                </Flex>
-            </footer>
+            <Footer />
         </>
     );
 };
