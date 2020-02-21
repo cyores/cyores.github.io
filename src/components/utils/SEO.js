@@ -21,8 +21,8 @@ const SEO = ({ description, lang, meta, title }) => {
     return (
         <Helmut
             htmlAttributes={{ lang }}
-            title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            title={title || "Christian Yores | Software Engineer"}
+            // titleTemplate={`%s | ${site.siteMetadata.title}`}
             meta={[
                 { name: `description`, content: metaDescription },
                 { property: `og:title`, content: title },

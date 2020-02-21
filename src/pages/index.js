@@ -22,6 +22,7 @@ import Input from "../components/utils/Input";
 import Textarea from "../components/utils/Textarea";
 import NetlifyForm from "../components/utils/NetlifyForm";
 import Footer from "../components/Footer";
+import LogoImg from "../components/utils/LogoImg";
 
 const AnimateScrollDownArrow = styled.div`
     @keyframes fadeIn {
@@ -49,13 +50,13 @@ const Index = ({
     const projects = edges;
     return (
         <>
-            <SEO title="Home" />
+            <SEO />
             <Header />
 
             <div className="svg-bg">
                 <div
                     className="container"
-                    style={{ paddingTop: "var(--space-xxl)" }}
+                    style={{ paddingTop: "var(--space-xl)" }}
                 >
                     <Flex>
                         <div
@@ -65,6 +66,26 @@ const Index = ({
                                 textAlign: "center"
                             }}
                         >
+                            <Flex>
+                                <div
+                                    style={{
+                                        width: "250px",
+                                        height: "250px",
+                                        background: "transparent",
+                                        borderRadius: "50%",
+                                        boxShadow:
+                                            "inset 0 0 6px 2px var(--color-primary)"
+                                    }}
+                                >
+                                    <LogoImg
+                                        style={{
+                                            width: "238px",
+                                            marginTop: "6px",
+                                            marginLeft: "6px"
+                                        }}
+                                    />
+                                </div>
+                            </Flex>
                             <h1>Christian Yores</h1>
                             <Flex>
                                 <div
@@ -123,7 +144,7 @@ const Index = ({
                 <div
                     style={{
                         position: "absolute",
-                        bottom: "var(--space-xxxl)",
+                        top: "85vh",
                         width: "100%"
                     }}
                 >
