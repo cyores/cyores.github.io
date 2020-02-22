@@ -1,7 +1,7 @@
 ---
 order: 1
 title: "OpenSurvey"
-screenshot: "../../images/opensurvey-screen.jpg"
+screenshot: "../../images/opensurvey-screen.png"
 technologies: "Javascript,React,Redux,Redux-Observable,Express.js,Node.js,PostgreSQL,HTML,CSS"
 liveLink: ""
 githubLink: "https://github.com/cyores/opensurvey"

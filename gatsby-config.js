@@ -38,8 +38,8 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            quality: 90,
-                            maxWidth: 700
+                            quality: 100,
+                            withWebp: true
                         }
                     }
                 ]
@@ -51,7 +51,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-sharp`,
             options: {
-                defaultQuality: 90
+                defaultQuality: 100
             }
         },
 

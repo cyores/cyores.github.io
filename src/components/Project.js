@@ -30,7 +30,11 @@ const Project = ({
             <Img
                 fluid={img}
                 alt="project screenshot"
-                style={{ width: "100%", borderRadius: "4px" }}
+                style={{
+                    width: "100%",
+                    maxWidth: "550px",
+                    borderRadius: "4px"
+                }}
             />
         </ImgWrapper>
         <div

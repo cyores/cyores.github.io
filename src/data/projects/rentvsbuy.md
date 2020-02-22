@@ -1,7 +1,7 @@
 ---
 order: 3
 title: "Rent Vs Buy"
-screenshot: "../../images/rvb-screen.jpg"
+screenshot: "../../images/rvb-screen.png"
 technologies: "Javascript,React,HTML,CSS"
 liveLink: "https://rentvbuy.netlify.com/"
 githubLink: "https://github.com/cyores/rentvbuy"

@@ -1,7 +1,7 @@
 ---
 order: 4
 title: "MLB Stats"
-screenshot: "../../images/mlbstats-screen.jpg"
+screenshot: "../../images/mlbstats-screen.png"
 technologies: "Javascript,React,HTML,CSS"
 liveLink: "https://mlbstats.netlify.com/"
 githubLink: "https://github.com/cyores/rentvbuy"

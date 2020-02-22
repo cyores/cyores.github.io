@@ -1,7 +1,7 @@
 ---
 order: 5
 title: "Master Password"
-screenshot: "../../images/mp-screen.jpg"
+screenshot: "../../images/mp-screen.png"
 technologies: "Javascript,Chrome Extension,HTML,CSS"
 liveLink: ""
 githubLink: "https://github.com/cyores/mpw-xbrowserextension"

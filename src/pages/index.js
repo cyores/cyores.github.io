@@ -312,7 +312,7 @@ export const projectsQuery = graphql`
                         technologies
                         screenshot {
                             childImageSharp {
-                                fluid(maxWidth: 600) {
+                                fluid(maxWidth: 550, toFormat: WEBP, quality: 100) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
