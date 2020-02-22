@@ -63,6 +63,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Raleway", sans-serif;
+    font-display: swap;
     font-size: var(--text-base-size);
     line-height: calc(var(--space-unit) * 1.5);
     -moz-osx-font-smoothing: grayscale;
