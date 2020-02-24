@@ -77,29 +77,41 @@ const Spacer = styled.div`
     }
 `;
 
-const MenuOptions = () => (
+const MenuOptions = ({ onHomePage }) => (
     <Flex>
         <nav>
-            <a href="#projects" style={{ textDecoration: "none" }}>
+            <a
+                href={onHomePage ? "#projects" : "/"}
+                style={{ textDecoration: "none" }}
+            >
                 <NavItem>projects</NavItem>
             </a>
             <Spacer>/</Spacer>
-            <a href="#experience" style={{ textDecoration: "none" }}>
+            <a
+                href={onHomePage ? "#experience" : "/"}
+                style={{ textDecoration: "none" }}
+            >
                 <NavItem>experience</NavItem>
             </a>
             <Spacer>/</Spacer>
-            <a href="#education" style={{ textDecoration: "none" }}>
+            <a
+                href={onHomePage ? "#education" : "/"}
+                style={{ textDecoration: "none" }}
+            >
                 <NavItem>education</NavItem>
             </a>
             <Spacer>/</Spacer>
-            <a href="#contact" style={{ textDecoration: "none" }}>
+            <a
+                href={onHomePage ? "#contact" : "/"}
+                style={{ textDecoration: "none" }}
+            >
                 <NavItem>contact</NavItem>
             </a>
         </nav>
     </Flex>
 );
 
-const Header = () => {
+const Header = ({ onHomePage = true }) => {
     const [open, setOpen] = useState(false);
     const [wasItOpen, setWasItOpen] = useState(false);
     return (
@@ -119,11 +131,11 @@ const Header = () => {
                     <>
                         {open ? (
                             <AnimateOpen>
-                                <MenuOptions />
+                                <MenuOptions onHomePage={onHomePage} />
                             </AnimateOpen>
                         ) : (
                             <AnimateClose>
-                                <MenuOptions />
+                                <MenuOptions onHomePage={onHomePage} />
                             </AnimateClose>
                         )}
                     </>
@@ -131,7 +143,7 @@ const Header = () => {
             </PhoneLayout>
 
             <DesktopLayout>
-                <MenuOptions />
+                <MenuOptions onHomePage={onHomePage} />
             </DesktopLayout>
         </Wrapper>
     );

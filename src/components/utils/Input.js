@@ -21,15 +21,16 @@ const StyledInput = styled.input`
     }
 `;
 
-const Input = ({ type, label, placeholder }) => {
+const Input = ({ type, label, placeholder, required }) => {
     return (
         <>
-            <label htmlFor={label}>{label}</label>
+            <label htmlFor={label}>{label}*</label>
             <StyledInput
                 id={label}
                 type={type}
                 placeholder={placeholder}
                 name={label}
+                required={required}
             />
         </>
     );
