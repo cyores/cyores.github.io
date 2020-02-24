@@ -234,9 +234,9 @@ const Index = ({
                             </h6>
 
                             <p>{school.description}</p>
-                            <p>
+                            {/* <p>
                                 <small>{school.extra}</small>
-                            </p>
+                            </p> */}
                         </React.Fragment>
                     ))}
                 </Section>

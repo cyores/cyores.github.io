@@ -13,6 +13,7 @@ const StyledInput = styled.input`
     color: var(--color-text);
     font-size: var(--text-base-size);
     opacity: 0.8;
+    transition: 0.25s ease;
     &:focus {
         opacity: 1;
         border-bottom: 2px solid var(--color-primary);
