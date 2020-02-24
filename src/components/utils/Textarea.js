@@ -11,6 +11,7 @@ const Wrapper = styled.textarea`
     background: var(--color-fg);
     color: var(--color-text);
     font-size: var(--text-base-size);
+    font-family: Raleway, sans-serif;
     opacity: 0.8;
     &:focus {
         opacity: 1;
@@ -19,16 +20,17 @@ const Wrapper = styled.textarea`
     }
 `;
 
-const Input = ({ type, label, placeholder }) => {
+const Input = ({ type, label, placeholder, required }) => {
     return (
         <>
-            <label htmlFor={label}>{label}</label>
+            <label htmlFor={label}>{label}*</label>
             <Wrapper
                 id={label}
                 type={type}
                 placeholder={placeholder}
                 name={label}
                 rows="10"
+                required={required}
             ></Wrapper>
         </>
     );

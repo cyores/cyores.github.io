@@ -7,6 +7,7 @@ const NetlifyForm = ({ name, style, children }) => (
             netlify-honeypot="bot-field"
             data-netlify="true"
             name={name}
+            action="/form-success"
             style={style}
         >
             {children}
