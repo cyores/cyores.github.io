@@ -272,17 +272,20 @@ const Index = ({
                         type="text"
                         label="Name"
                         placeholder="Name"
+                        required={true}
                         onChange={() => console.log("Input changed")}
                     />
                     <Input
                         type="text"
                         label="Email"
                         placeholder="Email"
+                        required={true}
                         onChange={() => console.log("Input changed")}
                     />
                     <Textarea
                         label="Message"
                         placeholder="Type your message here"
+                        required={true}
                         onChange={() => console.log("Input changed")}
                     ></Textarea>
                     <Flex dir="rowleft">
